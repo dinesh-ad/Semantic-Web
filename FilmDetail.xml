@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AboutFilm>
+  <Movie>
+    <Title>Crash</Title>
+    <Year>1894</Year>
+    <Director>
+      <name>Cronenberg</name>
+      <firstname>David</firstname>
+    </Director>
+    <Actor>
+      <name>Spader</name>
+      <firstname>James</firstname>
+    </Actor>
+    <Actor>
+      <name>Hunter</name>
+      <firstname>Holly</firstname>
+    </Actor>
+	<Actor>
+      <name>Arquette</name>
+      <firstname>Rosanna</firstname>
+    </Actor>
+  </Movie>
+  <Movie>
+    <Title>Dangereusement vôtre</Title>
+    <Year>1985</Year>
+    <Director>
+      <name>Glen</name>
+      <firstname>John</firstname>
+    </Director>
+    <Actor>
+      <name>Mazursky</name>
+      <firstname>Paul</firstname>
+    </Actor>
+  </Movie>
+</AboutFilm>

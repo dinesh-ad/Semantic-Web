@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- definition of an actor and director -->
+<xsd:complexType name="typeActorDirector">
+  <xsd:sequence>
+    <xsd:element name="name" type="xsd:string" />
+    <xsd:element name="firstname" type="xsd:string" />
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:simpleType name="typeDate">
+   <xsd:restriction base="xsd:gYear">
+     <xsd:minInclusive value="1895"/>
+     <xsd:maxInclusive value="2050"/>
+    <xsd:pattern value=".{4}"/>
+   </xsd:restriction>
+ </xsd:simpleType>
+  
+<!-- definition of a movie -->
+<xsd:complexType name="typeMovie" >
+  <xsd:sequence>
+    <xsd:element name="Title" type="xsd:string" />
+    <xsd:element name="Year" type="typeDate"/>
+    <xsd:element name="Director" type="typeActorDirector" minOccurs="1"/>
+    <xsd:element name="Actor" type="typeActorDirector" minOccurs="1" maxOccurs="3" />
+  </xsd:sequence>
+</xsd:complexType>
+
+<!-- Film Details -->
+<xsd:complexType name="typeFilm">
+   <xsd:sequence>
+     <xsd:element name="Movie" type="typeMovie" minOccurs="0" maxOccurs="2" />
+   </xsd:sequence>
+</xsd:complexType>
+
+<!-- root element of a movie -->
+<xsd:element name="AboutFilm" type="typeFilm"/>
+</xsd:schema>
